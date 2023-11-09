@@ -1,0 +1,159 @@
+/* no-duplicate-at-import-rules */
+/* @import 'a.css'; */
+
+/* no-descending-specificity */
+/* a {
+  top: 0;
+}
+
+#container a {
+  top: 10px;
+} */
+
+/* declaration-block-no-duplicate-custom-properties */
+/* .a {
+  --custom-property: pink;
+} */
+
+/* declaration-block-no-duplicate-properties */
+/* .b {
+  color: pink;
+} */
+
+/* keyframe-block-no-duplicate-selectors */
+/* @keyframes foo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* font-family-no-duplicate-names */
+/* .c {
+  font-family: Times, serif;
+} */
+
+/* no-duplicate-selectors */
+/* .foo,
+.bar {
+  color: aquamarine;
+} */
+
+/* block-no-empty */
+/* .d {
+  color: aliceblue;
+} */
+
+/* comment-no-empty */
+
+/* color-no-invalid-hex */
+/* .e {
+  color: #333;
+} */
+
+/* function-calc-no-unspaced-operator */
+/* .f {
+  top: calc(1px + 2px);
+} */
+
+/* keyframe-declaration-no-important */
+/* @keyframes bar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/* media-query-no-invalid */
+/* @media (width = 100px) {
+  body {
+    font-size: 12px;
+  }
+} */
+
+/* named-grid-areas-no-invalid */
+/* .g {
+  grid-template-areas:
+    'a a a'
+    'b b b';
+} */
+
+/* no-invalid-double-slash-comments */
+/* .h {
+  color: pink;
+} */
+
+/* no-invalid-position-at-import-rule */
+/* @import 'foo.css'; */
+
+/* .i {
+  color: aliceblue;
+} */
+
+/* string-no-newline */
+/* .j {
+  content: 'first\\nsecond';
+} */
+
+/* custom-property-no-missing-var-function */
+/* :root {
+  --foo: red;
+}
+.k {
+  color: var(--foo);
+} */
+
+/* font-family-no-missing-generic-family-keyword */
+/* .l {
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
+} */
+
+/* function-linear-gradient-no-nonstandard-direction */
+/* .m {
+  background: linear-gradient(to top, #fff, #000);
+} */
+
+/* declaration-block-no-shorthand-property-overrides */
+/* .n {
+  padding: 20px;
+  padding-left: 10px;
+} */
+
+/* selector-anb-no-unmatchable */
+/* .o:nth-last-child(1n) {
+  border: none;
+} */
+
+/* annotation-no-unknown */
+/* .p {
+  color: green !important;
+} */
+
+/* at-rule-no-unknown */
+/* @media (width >= 960px) {
+  body {
+    font-size: 12px;
+  }
+} */
+
+/* declaration-property-value-no-unknown */
+/* .q {
+  top: 0;
+} */
+
+/* function-no-unknown */
+/* .r {
+  transform: scale(1);
+} */
+
+/* media-feature-name-no-unknown */
+/* @media (width >= 700px) and (orientation: landscape) {
+  body {
+    font-size: 12px;
+  }
+} */
