@@ -16,7 +16,7 @@ const generateStylelintFn = (ext, initConfigFn) => {
     return stylelint.lint({
       configBasedir,
       config,
-      files
+      files: files.filter((item) => !item.endsWith('scssComp.vue'))
     })
   }
 }

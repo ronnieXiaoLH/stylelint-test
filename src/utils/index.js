@@ -79,7 +79,12 @@ exports.initCssConfig = function () {
 }
 
 exports.initScssConfig = function () {
-  const disabledRules = ['scss/comment-no-empty']
+  const disabledRules = [
+    'scss/comment-no-empty',
+    'scss/double-slash-comment-empty-line-before',
+    'scss/dollar-variable-empty-line-before',
+    'scss/dollar-variable-pattern'
+  ]
 
   return {
     extends: ['stylelint-config-standard-scss'],
@@ -115,14 +120,18 @@ exports.initVueConfig = function () {
     extends: [
       'stylelint-config-standard-less',
       'stylelint-config-standard-vue'
+      // 'stylelint-config-standard-scss',
+      // 'stylelint-config-standard-vue/scss'
     ],
     overrides: [
       // {
-      //   files: ['**/*.(vue)'],
+      //   // files: ['**/*.(vue)'],
+      //   files: ['**/scssComp.(vue)'],
       //   customSyntax: 'postcss-scss'
       // },
       {
-        files: ['**/*.(vue)'],
+        // files: ['**/*.(vue)'],
+        files: ['**/lessComp.(vue)'],
         customSyntax: 'postcss-less'
       },
       {
@@ -144,7 +153,11 @@ const BUG_BLOCKER = [
   'no-invalid-position-at-import-rule',
   'annotation-no-unknown',
   'property-no-unknown',
-  'unit-no-unknown'
+  'unit-no-unknown',
+  'scss/at-extend-no-missing-placeholder',
+  'scss/dollar-variable-no-missing-interpolation',
+  'scss/no-global-function-names',
+  'less/color-no-invalid-hex'
 ]
 
 const BUG_CRITICAL = [
@@ -158,7 +171,8 @@ const BUG_CRITICAL = [
   'media-feature-name-no-vendor-prefix',
   'property-no-vendor-prefix',
   'selector-no-vendor-prefix',
-  'value-no-vendor-prefix'
+  'value-no-vendor-prefix',
+  'scss/operator-no-unspaced'
 ]
 
 const BUG_MAJOR = [
@@ -170,7 +184,9 @@ const BUG_MAJOR = [
   'function-no-unknown',
   'media-feature-name-no-unknown',
   'selector-pseudo-class-no-unknown',
-  'selector-pseudo-element-no-unknown'
+  'selector-pseudo-element-no-unknown',
+  'scss/at-rule-no-unknown',
+  'less/no-duplicate-variables'
 ]
 
 const BUG_MINOR = ['no-irregular-whitespace']
@@ -196,10 +212,13 @@ const CODE_SMELL_MAJOR = [
   'value-keyword-case',
   'declaration-block-single-line-max-declarations',
   'number-max-precision',
-  'keyframe-selector-notation'
+  'keyframe-selector-notation',
+  'scss/at-if-no-null',
+  'scss/no-duplicate-mixins'
 ]
 
 const CODE_SMELL_MINOR = [
+  'no-duplicate-at-import-rules',
   'length-zero-no-unit',
   'alpha-value-notation',
   'color-function-notation',
@@ -224,7 +243,34 @@ const CODE_SMELL_MINOR = [
   'comment-empty-line-before',
   'custom-property-empty-line-before',
   'declaration-empty-line-before',
-  'rule-empty-line-before'
+  'rule-empty-line-before',
+  'scss/comment-no-empty',
+  'scss/double-slash-comment-empty-line-before',
+  'scss/dollar-variable-empty-line-before',
+  'scss/at-import-partial-extension',
+  'scss/function-quote-no-quoted-strings-inside',
+  'scss/function-unquote-no-unquoted-strings-inside',
+  'scss/load-no-partial-leading-underscore',
+  'scss/operator-no-newline-after',
+  'scss/operator-no-newline-before',
+  'scss/at-else-closing-brace-newline-after',
+  'scss/at-else-closing-brace-space-after',
+  'scss/at-else-empty-line-before',
+  'scss/at-else-if-parentheses-space-before',
+  'scss/at-function-parentheses-space-before',
+  'scss/at-function-pattern',
+  'scss/at-if-closing-brace-newline-after',
+  'scss/at-if-closing-brace-space-after',
+  'scss/at-mixin-argumentless-call-parentheses',
+  'scss/at-mixin-parentheses-space-before',
+  'scss/at-mixin-pattern',
+  'scss/at-rule-conditional-no-parentheses',
+  'scss/dollar-variable-colon-space-after',
+  'scss/dollar-variable-colon-space-before',
+  'scss/dollar-variable-empty-line-before',
+  'scss/dollar-variable-pattern',
+  'scss/double-slash-comment-whitespace-inside',
+  'scss/percent-placeholder-pattern'
 ]
 
 const CODE_SMELL_INFO = []

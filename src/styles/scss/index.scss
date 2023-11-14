@@ -68,7 +68,7 @@ $border-dark: rgba($base-color, 0.88);
     from {
       opacity: 0;
     }
-    
+
     to {
       opacity: 1;
     }
@@ -159,3 +159,124 @@ $border-dark: rgba($base-color, 0.88);
     }
   }
 }
+
+// scss/at-extend-no-missing-placeholder
+// %button-style {
+//   background-color: blue;
+//   color: white;
+//   border: none;
+//   padding: 10px;
+// }
+
+// .button {
+//   @extend %button-style;
+// }
+
+// scss/at-if-no-null
+// $color: red;
+
+// @if $color == red {
+//   // 条件表达式中没有 null 值
+//   background-color: $color;
+// }
+
+// $condition: true;
+
+// @if $condition {
+//   // 条件表达式是布尔值，没有 null 值
+//   font-size: 16px;
+// }
+
+// scss/at-rule-no-unknown
+// @mixin button-style {
+//   background-color: blue;
+//   color: white;
+//   border: none;
+//   padding: 10px;
+// }
+
+// @function add($a, $b) {
+//   @return $a + $b;
+// }
+
+// scss/declaration-nested-properties-no-divided-groups
+
+// scss/dollar-variable-no-missing-interpolation
+// .class {
+//   $var: 'my-anim';
+//   animation-name: #{$var};
+// }
+
+// scss/function-quote-no-quoted-strings-inside
+// $font: Helvetica;
+
+// p {
+//   font-family: quote($font);
+// }
+
+// scss/function-unquote-no-unquoted-strings-inside
+// $font: 'Helvetica';
+
+// p {
+//   font-family: unquote($font);
+// }
+
+// scss/load-no-partial-leading-underscore
+// @import 'foo';
+
+// scss/no-duplicate-mixins
+// @mixin font-size-default {
+//   font-size: 16px;
+// }
+
+// @mixin font-size-lg {
+//   font-size: 18px;
+// }
+
+// scss/no-global-function-names
+// @use 'sass:color';
+// a {
+//   background: color.adjust(#6b717f, $red: 15);
+// }
+
+// scss/operator-no-newline-after
+// a {
+//   width: 10 + 1;
+// }
+
+// scss/operator-no-newline-before
+// a {
+//   width: 10 + 1;
+// }
+
+// scss/operator-no-unspaced
+// .a {
+//   width: calc(100px + 200px);
+// }
+
+// scss/at-else-closing-brace-newline-after
+// a {
+//   @if ($x == 1) {
+//     // ...
+//   } @else if {
+//     // ...
+//   } @else {
+//   }
+
+//   width: 10px;
+// }
+
+// scss/at-mixin-argumentless-call-parentheses
+// @include mixin-name;
+
+// scss/at-mixin-parentheses-space-before
+// @mixin foo($arg) {
+// }
+
+// scss/at-mixin-pattern
+// @mixin foo-bar {
+// }
+
+// scss/at-rule-conditional-no-parentheses
+// @if true {
+// }

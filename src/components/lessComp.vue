@@ -346,4 +346,13 @@ export default {}
   // comment-whitespace-inside
   // /*comment*/
 }
+
+// less/color-no-invalid-hex
+// a {
+//   color: #f3;
+// }
+
+// less/no-duplicate-variables
+@color: #333;
+@color: #333;
 </style>
